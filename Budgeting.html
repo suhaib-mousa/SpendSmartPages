@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSmart - Budget Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="bug.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <!-- Header -->
+                <div class="text-center mb-4">
+                    <h1 class="display-5 fw-bold text-primary">SpendSmart</h1>
+                    <h2 class="fs-4">Budget Analysis / تحليل الميزانية</h2>
+                    <p class="text-muted">Let's analyze your financial habits and create a personalized budget plan.</p>
+                </div>
+                
+                <!-- Chatbot Card -->
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white py-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-robot me-2 fs-4"></i>
+                            <h3 class="m-0 fs-5">Financial Assistant / المساعد المالي</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Messages Area -->
+                    <div class="card-body chat-container" id="chatContainer">
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- User Input Area -->
+                    <div class="card-footer bg-light" id="userInputArea">
+                        <form id="userInputForm" class="d-flex align-items-center">
+                            <div class="input-group">
+                                <input type="text" id="userInput" class="form-control" placeholder="Type your answer..." autocomplete="off">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Budget Summary Card (Initially Hidden) -->
+                <div class="card mt-4 shadow-lg d-none" id="budgetSummaryCard">
+                    <div class="card-header bg-success text-white py-3">
+                        <h3 class="m-0 fs-5"><i class="fas fa-chart-pie me-2"></i> Your Budget Summary / ملخص ميزانيتك</h3>
+                    </div>
+                    <div class="card-body" id="budgetSummaryContent">
+                        <!-- Summary content will be inserted here -->
+                    </div>
+                    <div class="card-footer bg-light">
+                        <button class="btn btn-outline-primary" id="restartButton">
+                            <i class="fas fa-redo me-2"></i>Start Over / ابدأ من جديد
+                        </button>
+                        <button class="btn btn-primary float-end" id="downloadButton">
+                            <i class="fas fa-download me-2"></i>Download Report / تنزيل التقرير
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="bug.js"></script>
+</body>
+</html>
